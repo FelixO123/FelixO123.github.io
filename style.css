@@ -1,0 +1,56 @@
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background-image:url("assets/fondo_pagina.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0; /* eliminar márgenes por defecto */
+}
+
+.encabezado1{
+    text-align: center;
+    font-size: 55px;
+}
+
+
+.card-img-top{
+    width: 100%;         /* que ocupe todo el ancho de la card */
+    height: 200px;       /* altura fija para todas */
+    object-fit: cover; 
+}
+
+.encabezado2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.encabezado3{
+    text-align: center;
+}
+
+.encabezado4{
+    text-align: center;
+}
+
+#CURSOS, #FORMULARIO, #QUIENES_SOMOS {
+  scroll-margin-top: 100px; /* Ajusta el valor a lo que necesites */
+}
+
+nav.navbar{
+    min-height: 100px;
+}
+
+nav.navbar .nav-link {
+  font-size: 40px; /* Cambia 1.5rem por el tamaño que prefieras */
+}
+
+.img-logo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
