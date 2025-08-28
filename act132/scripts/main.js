@@ -1,6 +1,6 @@
 document.body.style.backgroundColor = '#3498db';
 
-function getDat(form){
+function getData(form){
     var formData = new FormData(form);
 
     for (var pair of formData.entries()){
@@ -14,5 +14,5 @@ function getDat(form){
 
 document.getElementById("Formulario").addEventListener("submit", function (e){
     e.preventDefault();
-    getDat(e.target);
+    getData(e.target);
 });
