@@ -1,6 +1,7 @@
 document.body.style.backgroundColor = '#3498db';
 
 function getData(form){
+    try{
     var formData = new FormData(form);
 
     for (var pair of formData.entries()){
@@ -9,6 +10,9 @@ function getData(form){
 
     console.log(Object.fromEntries(formData));
     console.log(JSON.stringify(Object.fromEntries(formData), null, 4));
+    }catch(error){
+        console.error('Error en get: ', error)
+    }
 }
 
 
