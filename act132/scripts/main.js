@@ -2,6 +2,7 @@ document.body.style.backgroundColor = '#3498db';
 
 
 function getData(form) {
+    console.log("inicio funcion GET DATA");
     var formData = new FormData(form);
 
     for (var pair of formData.entries()) {
@@ -10,11 +11,13 @@ function getData(form) {
 
     console.log(Object.fromEntries(formData));
     console.log(JSON.stringify(Object.fromEntries(formData), null, 4));
-    console.log("FIN DE GETDAT");
+    console.log("Fin funcion GET DATA");
 }
 
 
 document.getElementById("Formulario").addEventListener("submit", function (e) {
+    console.log("INICIO DOCUMENT");
     e.preventDefault();
     getData(e.target);
+    console.log("Fin DOCUMENT");
 });
