@@ -11,7 +11,8 @@ function getData(form){
     console.log(Object.fromEntries(formData));
     console.log(JSON.stringify(Object.fromEntries(formData), null, 4));
     }catch(error){
-        console.error('Error en get: ', error)
+        //console.error('Error en get: ', error)
+        console.log("PRUEBA EROR");
     }
 }
 
