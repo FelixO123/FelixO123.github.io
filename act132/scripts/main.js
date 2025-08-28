@@ -19,7 +19,7 @@ function retornarEdad(e) {
     var formData = new FormData(e.target);
 
     for(var pair of formData.entries()){
-        console.log(pair[1]);
+        
     }
 }
 
