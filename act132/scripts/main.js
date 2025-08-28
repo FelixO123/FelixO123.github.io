@@ -12,7 +12,7 @@ function getData(form){
     console.log(JSON.stringify(Object.fromEntries(formData), null, 4));
     }catch(error){
         //console.error('Error en get: ', error)
-        console.log("PRUEBA EROR");
+        console.log("PRUEBA ERROR");
     }
 }
 
