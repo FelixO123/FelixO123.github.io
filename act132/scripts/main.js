@@ -1,4 +1,5 @@
 document.body.style.backgroundColor = '#3498db';
+console.log("PRUEBA ERROR");
 
 function getData(form) {
     try {
