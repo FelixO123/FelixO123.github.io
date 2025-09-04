@@ -55,12 +55,12 @@
 
 
         <!-- inicio formulario registro de usuario-->
-        <form>
+        <form class="form_registro_usuario">
 
             <div class="nombre">
                 <label for="exampleInputNombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Ingrese correctamente su correo</div>
+                <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp">
+                <div id="nombreHelp" class="form-text">Ingrese su nombre completo</div>
             </div>
 
             <div class="email">
@@ -77,12 +77,22 @@
                 <label class="form-check-label" for="exampleCheck1">Mostrar Contraseña</label>
             </div>
 
-            <!-- ARREGLAR CONFIRMACION DE CONTRASEÑA Y CAMPOS FALTANTES-->
             <div class="confirmacion_contraseña">
-                <label type="password" class="form-label">Confirm Password</label>
-                <label class="form-check-label" for="exampleCheck1">Mostrar Contraseña</label>
+              <label for="exampleInputPassword1" class="form-label">Confirm_Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword2">
             </div>
 
+            <div class="mostrar_contraseña_confirmacion">
+                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                <label class="form-check-label" for="exampleCheck2">Mostrar Contraseña Confirmacion</label>
+            </div>
+            
+
+            <div class="telefono">
+                <label for="exampleInputTelefono" class="form-label">Telefono</label>
+                <input type="number" class="form-control" id="exampleInputTelefono" aria-describedby="telefonoHelp">
+                <div id="telefonoHelp" class="form-text">Ingrese telefono></div>
+            </div>
 
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -93,9 +103,69 @@
 <!-- FIN SECCION REGISTRO DE USUARIO-->
 
 
+<!-- INICIO SECCION LOGIN USUARIO-->
+
+<section class="section_login_usuario  mt-5">
+    <h3 class="h3_login_usuario">
+        LOGIN USUARIO
+    </h3>
+
+    <!-- inicio formulario login de usuario-->
+    <form class="form_login_usuario">
+        <div class="email">
+            <label for="exampleInputEmailLogin" class="form-label">Email address Login</label>
+            <input type="email" class="form-control" id="exampleInputEmailLogin" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Ingrese correctamente su correo</div>
+        </div>
+        <div class="contraseñaLogin">
+            <label for="exampleInputPasswordLogin" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPasswordLogin">
+        </div>
+        <div class="mostrar_contraseñaLogin">
+            <input type="checkbox" class="form-check-input" id="exampleCheckLogin">
+            <label class="form-check-label" for="exampleCheck2">Mostrar Contraseña</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+</section>
 
 
+<!-- INICIO REGISTRO DE MASCOTAS-->
 
+<section class="section_registro_mascota  mt-5">
+  <h4 class="h4_registro_mascota">
+    REGISTRO MASCOTA
+  </h4>
+
+<form class="form_registro_mascota">
+
+  <div class="tipo-mascota">
+    <label for="tipoMascota" class="form-label">Tipo de mascota</label>
+    <select id="tipoMascota" class="form-select" aria-describedby="tipoMascotaHelp" required>
+      <option value="">Seleccione una opción</option>
+      <option value="perro">Perro</option>
+      <option value="gato">Gato</option>
+      <option value="ave">Ave</option>
+      <option value="pez">Pez</option>
+      <option value="otro">Otro</option>
+    </select>
+    <div id="tipoMascotaHelp" class="form-text">Seleccione el tipo de mascota</div>
+  </div>
+
+  <div class="Nombre-mascota">
+    <label for="exampleInputNombreMascota" class="form-label">Nombre Mascota</label>
+    <input type="text" class="form-control" id="exampleInputNombreMascota" aria-describedby="nombreMascotaHelp" required>
+    <div id="nombreMascotaHelp" class="form-text">Ingrese el nombre de su mascota</div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</section>
+
+
+<!-- FIN REGISTRO DE MASCOTAS-->
 
 
 
