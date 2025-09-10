@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })*/
 
     
-    /*
+    
     //VALIDACION REGISTRO MASCOTAS:
     const form_registro_mascota = document.querySelector(".form_registro_mascota");
     form_registro_mascota.addEventListener("submit", function (event) {
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    */
+
 
 
     // MOSTRAR CONTRASEÑA EN LOGIN USUARIO:
