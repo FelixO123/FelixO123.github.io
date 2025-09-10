@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    //VALIDACION NOMBRE:
     const form = document.querySelector(".form_registro_usuario");
-/*
+
     form.addEventListener("submit", function (event) {
       event.preventDefault(); // Evita que se recargue la página
 
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         console.log("Teléfono:", telefono);
-    })*/
+    })
 
     
     
@@ -172,3 +172,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// COMMIT 
