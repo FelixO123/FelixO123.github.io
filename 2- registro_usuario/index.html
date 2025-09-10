@@ -19,7 +19,7 @@
 
     <header class="header">
     
-        <h1>GUAU & MIAU</h1>
+        <h1>NOMBRE EMPRESA</h1>
     </header>
 
 <!-- INICIO BARRA DE NAVEGACION-->
@@ -47,9 +47,9 @@
 <!-- FIN BARRA DE NAVEGACION-->
 
 <!-- INICIO SECCION REGISTRO DE USUARIO-->
-<section class="section_registro_usuario  mt-5" style="background-color: #facc4eea;  max-width: 800px; padding: 50px; border-radius: 7px; width: 80%; margin-left: auto; margin-right: auto; margin-top: 40px; margin-bottom: 40px ; color: whitesmoke">
+<section class="section_registro_usuario  mt-5" style="background-color: #ffffffea;  max-width: 800px; padding: 50px; border-radius: 7px; width: 80%; margin-left: auto; margin-right: auto; margin-top: 40px; margin-bottom: 40px ; color: rgb(0, 0, 0)">
     <h2 class="h2_registro_usuario">
-        REGISTRO USUARIO
+        Registro Usuario
     </h2>
 
 
@@ -57,40 +57,62 @@
         <form class="form_registro_usuario">
 
             <div class="nombre">
-                <label for="exampleInputNombre" class="form-label">Nombre</label>
+                <label for="exampleInputNombre" class="form-label">Nombre Completo</label>
                 <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp">
                 <div id="nombreHelp" class="form-text">Ingrese su nombre completo</div>
             </div>
 
             <div class="email">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <label for="exampleInputEmail1" class="form-label">Correo</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Ingrese correctamente su correo</div>
             </div>
             <div class="contraseña">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mostrar_contraseña">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Mostrar Contraseña</label>
+                <label class="form-check-label" for="exampleCheck1">Mostrar contraseña</label>
             </div>
 
             <div class="confirmacion_contraseña">
-              <label for="exampleInputPassword1" class="form-label">Confirm_Password</label>
+              <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña</label>
               <input type="password" class="form-control" id="exampleInputPassword2">
             </div>
 
             <div class="mostrar_contraseña_confirmacion">
                 <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                <label class="form-check-label" for="exampleCheck2">Mostrar Contraseña Confirmacion</label>
+                <label class="form-check-label" for="exampleCheck2">Mostrar contraseña de confirmación</label>
             </div>
             
 
             <div class="telefono">
-                <label for="exampleInputTelefono" class="form-label">Telefono</label>
+                <label for="exampleInputTelefono" class="form-label">Teléfono</label>
                 <input type="number" class="form-control" id="exampleInputTelefono" aria-describedby="telefonoHelp">
                 <div id="telefonoHelp" class="form-text">Ingrese telefono></div>
+            </div>
+
+            <!-- Caja de despliegue de regiones -->
+            <div class="region">
+              <label for="regionSelect" class="form-label">Región</label>
+              <select id="regionSelect" class="form-control">
+                <option value="">Seleccione una región</option>
+                <option value="metropolitana">Región Metropolitana</option>
+                <option value="valparaiso">Región de Valparaíso</option>
+                <option value="biobio">Región del Biobío</option>
+                <option value="biobio">Región de la Araucanía</option>
+                <option value="biobio">Región de Ñuble</option>
+              </select>
+            </div>
+            
+            <!-- Caja de despliegue de Comunas -->
+            <div class="comuna">
+              <label for="comunaSelect" class="form-label">Comuna</label>
+              <select id="comunaSelect" class="form-control" disabled>
+                <option value="">Seleccione una comuna</option>
+                <!-- Se llenará dinámicamente con JavaScript -->
+              </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Enviar</button>

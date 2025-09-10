@@ -132,41 +132,37 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Teléfono:", telefono);
     })
 
-    
-    
-    //VALIDACION REGISTRO MASCOTAS:
-    const form_registro_mascota = document.querySelector(".form_registro_mascota");
-    form_registro_mascota.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se recargue la página
+        < script >
+  const comunasPorRegion = {
+        metropolitana: ["Santiago", "Maipú", "Las Condes", "La Florida", "Puente Alto"],
+        valparaiso: ["Valparaíso", "Viña del Mar", "Quilpué", "Villa Alemana"],
+        biobio: ["Concepción", "Talcahuano", "Chiguayante", "Los Ángeles"]
+    };
 
+    const regionSelect = document.getElementById("regionSelect");
+    const comunaSelect = document.getElementById("comunaSelect");
 
-        const nombreMascota = document.getElementById("exampleInputNombreMascota").value.trim();
-        const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    regionSelect.addEventListener("change", function () {
+        const region = this.value;
 
-        if (!nombreRegex.test(nombreMascota)) {
-            alert("El Nombre solo debe contener letras y espacios (sin números ni símbolos)");
-            return;
+        // Limpiar comunas anteriores
+        comunaSelect.innerHTML = '<option value="">Seleccione una comuna</option>';
+
+        if (region && comunasPorRegion[region]) {
+            comunaSelect.disabled = false;
+
+            comunasPorRegion[region].forEach(comuna => {
+                const option = document.createElement("option");
+                option.value = comuna.toLowerCase().replace(/\s+/g, "_");
+                option.textContent = comuna;
+                comunaSelect.appendChild(option);
+            });
+        } else {
+            comunaSelect.disabled = true;
         }
-
-        if (nombreMascota.length > 30) {
-            alert("La contraseña debe tener menos de 30 caracteres");
-            return;
-        }
-
-        console.log("Nombre Mascota:", nombreMascota);
-
     });
+</script >
 
-
-
-
-    // MOSTRAR CONTRASEÑA EN LOGIN USUARIO:
-    // ARREGLAR FUNCION PARA MOSTRAR CONTRASEÑA EN LOGIN USUARIO
-    const checkbox_login = document.getElementById('checkbox_login');
-    const passwordInput_login = document.getElementById('exampleInputPasswordLogin'); 
-    checkbox_login.addEventListener('change', function () {
-        passwordInput_login.type = this.checked ? 'text' : 'password'; 
-    });
     
-
+    
 });
