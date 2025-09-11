@@ -9,3 +9,42 @@
 }
 
 */
+
+.seccion1{
+    background-color: rgb(253, 202, 91);
+    min-height: 350px;
+    box-shadow: 10px 10px 5px grey;
+    margin: 60px;
+    
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    align-items: center;            /* alinea verticalmente */
+    gap: 20px;       
+    display: flex;
+    justify-content: space-between;   
+}
+
+.boton1{
+    margin-bottom: 30px;
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: black;
+    background-color: rgb(248, 248, 248);
+    border-radius: 20px;
+
+}
+.texto1{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 50px;
+}
+
+.imagen1 img{
+    border-radius: 75px; 
+    margin: 30px; 
+    align-content: end;
+    align-self: end;
+    align-items: end;
+
+ 
+}
