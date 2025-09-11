@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    //FORMULARIO REGISTRO CLIENTE:
+    // FORMULARIO REGISTRO CLIENTE:
+    const form = document.querySelector(".form_registro_usuario");
 
     // FUNCION MOSTRAR Y ESCONDER CONTRASEÑA
     const checkbox = document.getElementById('exampleCheck1');
@@ -18,142 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
         passwordInput2.type = this.checked ? 'text' : 'password';
     });
 
-    // VALIDACIONES REGISTRO CLIENTE:
-
-   //VALIDACION NOMBRE:
-    const form = document.querySelector(".form_registro_usuario");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Evita que se recargue la página
-
-      // Obtener valores de los inputs
-      const nombre = document.getElementById("exampleInputNombre").value;
-      const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
-
-      //VALIDAR CAMPO VACIO
-            if (nombre === "") {
-        alert("El campo Nombre no puede estar vacío");
-        console.error("Error: El campo Nombre está vacío");
-        return; // Detener el envío del formulario
-      }
-
-      // VALIDAR SOLO LETRAS Y ESPACIOS
-      if (!nombreRegex.test(nombre)) {
-        alert("El Nombre solo debe contener letras y espacios (sin números ni símbolos)");
-        return;
-      }
-
-        if (nombre.length > 30) {
-            alert("El campo Nombre no puede superar los 30 caracteres");
-            console.error("Error: El campo Nombre supera los 30 caracteres");
-            return; // Detener el envío del formulario
-        }
-
-
-      // Imprimir en la consola
-      console.log("Nombre:", nombre);
-    });
-
-    //VALIDACION EMAIL:
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Evita que se recargue l
-
-        const email = document.getElementById("exampleInputEmail1").value.trim();
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@duoc\.cl$/;
-
-        if (!emailRegex.test(email)) {
-            alert("El correo debe tener un formato válido y terminar en @duoc.cl");
-            return;
-        }
-
-    console.log("Email:", email);
-
-    });
-
-
-    //VALIDACION CONTRASEÑA:
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se recargue l
-
-        const contrasena = document.getElementById("exampleInputPassword1").value.trim();
-        const passwordRegex = /^(?=[A-Z])(?=.*[a-z]).*$/;
-
-        if (!passwordRegex.test(contrasena)) {
-            alert("La contraseña debe comenzar con una letra mayúscula y tener al menos una letra minúscula");
-            return;
-        }
-
-        if (!/\d/.test(contrasena)) {
-            alert("La contraseña debe contener al menos un número");
-            return;
-        }
-
-        if (!/[!@#$%^&*(),.?":{}|<>]/.test(contrasena)) {
-            alert("La contraseña debe contener al menos un carácter especial");
-            return;
-        }
-        
-        if(contrasena.length < 8) {
-            alert("La contraseña debe tener al menos 8 caracteres");
-            return;
-        }
-
-         console.log("Contraseña:", contrasena);
-
-    });
-
-
-    //VALIDACION CONFIRMACION CONTRASEÑA:
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se recargue la página
-        const contrasena = document.getElementById("exampleInputPassword1").value.trim();
-        const confirmacion = document.getElementById("exampleInputPassword2").value.trim();
-
-        if (contrasena !== confirmacion) {
-            alert("La confirmación de la contraseña no coincide con la contraseña");
-            return;
-        }
-        console.log("Confirmación de Contraseña:", confirmacion);
-
-    })
-
-
-    //vALIDACION TELEFONO:
-
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se recargue la página
-
-        const telefono = document.getElementById("exampleInputTelefono").value.trim();
-
-        if (!/^\d{9}$/.test(telefono)) {
-            alert("El teléfono debe contener exactamente 9 dígitos numéricos");
-            return;
-        }
-        console.log("Teléfono:", telefono);
-    })
-
-        < script >
-  const comunasPorRegion = {
-        metropolitana: ["Santiago", "Maipú", "Las Condes", "La Florida", "Puente Alto"],
-        valparaiso: ["Valparaíso", "Viña del Mar", "Quilpué", "Villa Alemana"],
-        biobio: ["Concepción", "Talcahuano", "Chiguayante", "Los Ángeles"]
+    // REGISTRO USUARIO: INICIO LOGICA DE CAJAS DE DESPLIEGUE DE REGION Y COMUNAS DINAMICA
+    const comunasPorRegion = {
+        metropolitana: ["Santiago", "Maipú", "Puente Alto", "La Florida", "Las Condes"],
+        valparaiso: ["Valparaíso", "Viña del Mar", "Quilpué", "Villa Alemana", "San Antonio"],
+        biobio: ["Concepción", "Talcahuano", "Chiguayante", "Los Ángeles", "Coronel"],
+        araucania: ["Temuco", "Padre Las Casas", "Angol", "Villarrica", "Pucón"],
+        nuble: ["Chillán", "San Carlos", "Bulnes", "Yungay", "Quirihue"]
     };
 
     const regionSelect = document.getElementById("regionSelect");
     const comunaSelect = document.getElementById("comunaSelect");
 
     regionSelect.addEventListener("change", function () {
-        const region = this.value;
+        const regionSeleccionada = regionSelect.value;
+        comunaSelect.innerHTML = "<option value=''>Seleccione una comuna</option>";
 
-        // Limpiar comunas anteriores
-        comunaSelect.innerHTML = '<option value="">Seleccione una comuna</option>';
-
-        if (region && comunasPorRegion[region]) {
+        if (comunasPorRegion[regionSeleccionada]) {
             comunaSelect.disabled = false;
-
-            comunasPorRegion[region].forEach(comuna => {
+            comunasPorRegion[regionSeleccionada].forEach(comuna => {
                 const option = document.createElement("option");
-                option.value = comuna.toLowerCase().replace(/\s+/g, "_");
+                option.value = comuna.toLowerCase().replace(/\s+/g, "-");
                 option.textContent = comuna;
                 comunaSelect.appendChild(option);
             });
@@ -161,8 +47,157 @@ document.addEventListener('DOMContentLoaded', () => {
             comunaSelect.disabled = true;
         }
     });
-</script >
 
-    
-    
+    // VALIDACIONES
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // VALIDACIÓN NOMBRE
+        const nombre = document.getElementById("exampleInputNombre").value.trim();
+        const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
+        if (nombre === "") {
+            alert("El campo Nombre no puede estar vacío");
+            console.error("Error: El campo nombre no puede estar vacío")
+            return;
+        }
+
+        if (!nombreRegex.test(nombre)) {
+            alert("El Nombre solo debe contener letras y espacios");
+            console.error("El Nombre solo debe contener letras y espacios")
+            return;
+        }
+
+        if (nombre.length > 30) {
+            alert("El campo Nombre no puede superar los 30 caracteres");
+            console.error("El campo Nombre no puede superar los 30 caracteres")
+            return;
+        }
+
+        console.log("Nombre:", nombre);
+
+        // VALIDACIÓN EMAIL
+        const emailInput = document.getElementById("exampleInputEmail1");
+        const email = emailInput.value.trim();
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@(duoc\.cl|gmail\.com|profesor\.duoc\.cl)$/;
+
+        if (email === "") {
+            alert("El campo correo no puede estar vacío.");
+            console.error("Error: El campo correo no puede estar vacío")
+            emailInput.focus();
+            return;
+        }
+
+        if (email.length > 100) {
+            alert("El correo no puede superar los 100 caracteres.");
+            console.error("El correo no puede superar los 100 caracteres")
+            emailInput.focus();
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            alert("El correo debe terminar en @duoc.cl, @gmail.com o @profesor.duoc.cl");
+            console.error("El correo debe terminar en @duoc.cl, @gmail.com o @profesor.duoc.cl")
+            emailInput.focus();
+            return;
+        }
+
+        console.log("Email:", email);
+
+        // VALIDACIÓN CONTRASEÑA
+        const contrasena = document.getElementById("exampleInputPassword1").value.trim();
+        const passwordRegex = /^(?=[A-Z])(?=.*[a-z]).*$/;
+
+        if (contrasena === "") {
+            alert("El campo contraseña no puede estar vacío");
+            console.error("El campo contraseña no puede estar vacío")
+            return;
+        }
+
+        if (!passwordRegex.test(contrasena)) {
+            alert("La contraseña debe comenzar con una letra mayúscula y tener al menos una minúscula");
+            console.error("La contraseña debe comenzar con una letra mayúscula y tener al menos una minúscula")
+            return;
+        }
+
+        if (!/\d/.test(contrasena)) {
+            alert("La contraseña debe contener al menos un número");
+            console.error("La contraseña debe contener al menos un número")
+            return;
+        }
+
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(contrasena)) {
+            alert("La contraseña debe contener al menos un carácter especial");
+            console.error("La contraseña debe contener al menos un carácter especial")
+            return;
+        }
+
+        if (contrasena.length < 4 || contrasena.length > 10) {
+            alert("La contraseña debe tener entre 4 y 10 caracteres");
+            console.error("La contraseña debe tener entre 4 y 10 caracteres")
+            return;
+        }
+
+        console.log("Contraseña:", contrasena);
+
+        // VALIDACIÓN CONFIRMACIÓN CONTRASEÑA
+        const confirmacion = document.getElementById("exampleInputPassword2").value.trim();
+
+        if (confirmacion === "") {
+            alert("Debe confirmar la contraseña");
+            console.error("Error: Debe confirmar la contraseña")
+            return;
+        }
+
+        if (contrasena !== confirmacion) {
+            alert("La confirmación no coincide con la contraseña");
+            console.error("Error: La confirmación no coincide con la contraseña")
+            return;
+        }
+
+        console.log("Confirmación de Contraseña:", confirmacion);
+
+        // VALIDACIÓN TELÉFONO
+        const telefono = document.getElementById("exampleInputTelefono").value.trim();
+
+        if (telefono === "") {
+            alert("El campo teléfono no puede estar vacío");
+            console.error("Error: El campo teléfono no puede estar vacío")
+            return;
+        }
+
+        if (!/^9\d{8}$/.test(telefono)) {
+            alert("El teléfono debe tener 9 dígitos y comenzar con 9");
+            console.error("Error: El teléfono debe tener 9 dígitos y comenzar con 9")
+            return;
+        }
+
+        console.log("Teléfono:", telefono);
+
+        // VALIDACIÓN REGIÓN Y COMUNA
+        const region = regionSelect.value;
+        const comuna = comunaSelect.value;
+
+        if (region === "") {
+            alert("Debe seleccionar una región.");
+            console.error("Error: Debe seleccionar una región.")
+            regionSelect.focus();
+            return;
+        }
+
+        if (comuna === "") {
+            alert("Debe seleccionar una comuna.");
+            console.error("Error: Debe seleccionar una comuna.")
+            comunaSelect.focus();
+            return;
+        }
+
+        console.log("Región seleccionada:", region);
+        console.log("Comuna seleccionada:", comuna);
+
+        // ✅ Si todo está bien, podrías enviar el formulario:
+        //form.submit();
+        alert("Formulario validado con éxito.");
+    });
+
 });

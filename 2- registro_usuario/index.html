@@ -17,34 +17,45 @@
 
 <body>
 
-    <header class="header">
-    
-        <h1>NOMBRE EMPRESA</h1>
-    </header>
-
 <!-- INICIO BARRA DE NAVEGACION-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Registro Usuario</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Registro Mascotas</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg" style=" font-family: 'copperplate', fantasy; font-weight:lighter; background-color: #ffe07a; " data-bs-theme="dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img src="https://media1.tenor.com/m/f6ts3WWJa-8AAAAd/funny-cats-funny.gif" alt="Logo" width="30" height="24" style="border-radius: 75px; " class="d-inline-block align-text-top">
+        NombreEmpresa
+        </a>
+        
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mb-auto mb-2 mb-lg-0" >
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item ">
+            <a class="nav-link " href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Contactos</a>
+            </li>
+        </ul>
+        </div>
+
+        <a class="navbar-brand" href="#">
+        <img src="/1- inicio/assets/carrito.png" alt="Logo" width="30" height="24" style="border-radius: 75px; " class="d-inline-block align-text-top">
+        Carrito
+        </a>
     </div>
-  </div>
-</nav>
+    </nav>
 <!-- FIN BARRA DE NAVEGACION-->
+
 
 <!-- INICIO SECCION REGISTRO DE USUARIO-->
 <section class="section_registro_usuario  mt-5" style="background-color: #ffffffea;  max-width: 800px; padding: 50px; border-radius: 7px; width: 80%; margin-left: auto; margin-right: auto; margin-top: 40px; margin-bottom: 40px ; color: rgb(0, 0, 0)">
@@ -101,8 +112,8 @@
                 <option value="metropolitana">Región Metropolitana</option>
                 <option value="valparaiso">Región de Valparaíso</option>
                 <option value="biobio">Región del Biobío</option>
-                <option value="biobio">Región de la Araucanía</option>
-                <option value="biobio">Región de Ñuble</option>
+                <option value="araucania">Región de la Araucanía</option>
+                <option value="nuble">Región de Ñuble</option>
               </select>
             </div>
             
@@ -111,84 +122,17 @@
               <label for="comunaSelect" class="form-label">Comuna</label>
               <select id="comunaSelect" class="form-control" disabled>
                 <option value="">Seleccione una comuna</option>
-                <!-- Se llenará dinámicamente con JavaScript -->
+            <!-- Se llenará dinámicamente con JavaScript -->
               </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
         <!-- fin formulario registro de usuario-->
 
 </section>
 
 <!-- FIN SECCION REGISTRO DE USUARIO-->
-
-
-<!-- INICIO SECCION LOGIN USUARIO-->
-
-<section class="section_login_usuario  mt-5" style="background-color: #ffefc2ea;  max-width: 800px; padding: 50px; border-radius: 7px; width: 80%; margin-left: auto; margin-right: auto; margin-top: 40px; margin-bottom: 40px ; color: rgb(43, 43, 43)">
-    <h3 class="h3_login_usuario">
-        LOGIN USUARIO
-    </h3>
-
-    <!-- inicio formulario login de usuario-->
-    <form class="form_login_usuario">
-        <div class="email">
-            <label for="exampleInputEmailLogin" class="form-label">Email address Login</label>
-            <input type="email" class="form-control" id="exampleInputEmailLogin" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Ingrese correctamente su correo</div>
-        </div>
-        <div class="contraseñaLogin">
-            <label for="exampleInputPasswordLogin" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPasswordLogin">
-        </div>
-        <div class="mostrar_contraseñaLogin">
-            <input type="checkbox" class="form-check-input" id="exampleCheckLogin">
-            <label class="form-check-label" for="exampleCheck2">Mostrar Contraseña</label>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-
-</section>
-
-
-<!-- INICIO REGISTRO DE MASCOTAS-->
-
-<section class="section_registro_mascota  mt-5">
-  <h4 class="h4_registro_mascota">
-    REGISTRO MASCOTA
-  </h4>
-
-<form class="form_registro_mascota">
-
-  <div class="tipo-mascota">
-    <label for="tipoMascota" class="form-label">Tipo de mascota</label>
-    <select id="tipoMascota" class="form-select" aria-describedby="tipoMascotaHelp" required>
-      <option value="">Seleccione una opción</option>
-      <option value="perro">Perro</option>
-      <option value="gato">Gato</option>
-      <option value="ave">Ave</option>
-      <option value="pez">Pez</option>
-      <option value="otro">Otro</option>
-    </select>
-    <div id="tipoMascotaHelp" class="form-text">Seleccione el tipo de mascota</div>
-  </div>
-btn-primary
-  <div class="Nombre-mascota">
-    <label for="exampleInputNombreMascota" class="form-label">Nombre Mascota</label>
-    <input type="text" class="form-control" id="exampleInputNombreMascota" aria-describedby="nombreMascotaHelp" required>
-    <div id="nombreMascotaHelp" class="form-text">Ingrese el nombre de su mascota</div>
-  </div>
-  
-  <button type="submit" class="btn " style="background-color: white; border-color: black;">Enviar</button>
-</form>
-</section>
-
-
-<!-- FIN REGISTRO DE MASCOTAS-->
-
-
 
      <script src="scripts/main.js"></script>
 
