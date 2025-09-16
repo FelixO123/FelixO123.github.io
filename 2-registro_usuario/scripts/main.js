@@ -195,9 +195,37 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Región seleccionada:", region);
         console.log("Comuna seleccionada:", comuna);
 
+        let listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        const nuevoUsuario = {
+            nombre,
+            email,
+            contrasena,
+            telefono,
+            region,
+            comuna
+        };
+
+        const existeUsuario = listaUsuarios.find(u => u.email === email);
+        if (existeUsuario) {
+            alert("El correo ya está registrado");
+            console.error("Error: El correo ya está registrado");
+            return;
+        }
+
+        listaUsuarios.push(nuevoUsuario);
+        console.log("Usuario registrado:", nuevoUsuario);
+        console.log("Lista de usuarios:", listaUsuarios);
+
+        localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
         // ✅ Si todo está bien, podrías enviar el formulario:
         //form.submit();
         alert("Formulario validado con éxito.");
+
+        form.reset();
+        comunaSelect.disabled = true;
+
+        //localStorage.removeItem("usuarios");// vaciar lista para pruebas
     });
 
 });
