@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUAU & MIAU</title>
+    <title>NOMBRE EMPRESA</title>
     <link rel="stylesheet" href="style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -56,28 +56,30 @@
     </nav>
 <!-- FIN BARRA DE NAVEGACION-->
 
+<img src="assets/logo_empresa.jpg" alt="Logo" width="150" height="150" style="border-radius: 75px; " class="d-block mx-auto">
+<h1 class="encabezado1">
+    NOMBRE EMPRESA
+</h1>
 
 <!-- INICIO SECCION REGISTRO DE USUARIO-->
-<section class="section_registro_usuario  mt-5" style="background-color: #ffffffea;  max-width: 800px; padding: 50px; border-radius: 7px; width: 80%; margin-left: auto; margin-right: auto; margin-top: 40px; margin-bottom: 40px ; color: rgb(0, 0, 0)">
+<section class="section_registro_usuario  mt-1" style="background-color: #ffffffea;  max-width: 800px; padding: 50px; border-radius: 7px; width: 80%; margin-left: auto; margin-right: auto; margin-top: 40px; margin-bottom: 40px ; color: rgb(0, 0, 0)">
     <h2 class="h2_registro_usuario">
-        Registro Usuario
+        Inicio Sesión
     </h2>
 
 
+    
+
+
         <!-- inicio formulario registro de usuario-->
-        <form class="form_registro_usuario">
+        <form class="form_inicio_sesion">
 
-            <div class="nombre">
-                <label for="exampleInputNombre" class="form-label">Nombre Completo</label>
+            <div class="correo">
+                <label for="exampleInputNombre" class="form-label">Correo</label>
                 <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp">
-                <div id="nombreHelp" class="form-text">Ingrese su nombre completo</div>
+                <div id="nombreHelp" class="form-text">Ingrese correo correctamente</div>
             </div>
 
-            <div class="email">
-                <label for="exampleInputEmail1" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Ingrese correctamente su correo</div>
-            </div>
             <div class="contraseña">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="exampleInputPassword1">
@@ -86,53 +88,14 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Mostrar contraseña</label>
             </div>
-
-            <div class="confirmacion_contraseña">
-              <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword2">
-            </div>
-
-            <div class="mostrar_contraseña_confirmacion">
-                <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                <label class="form-check-label" for="exampleCheck2">Mostrar contraseña de confirmación</label>
-            </div>
             
-
-            <div class="telefono">
-                <label for="exampleInputTelefono" class="form-label">Teléfono</label>
-                <input type="number" class="form-control" id="exampleInputTelefono" aria-describedby="telefonoHelp">
-                <div id="telefonoHelp" class="form-text">Ingrese telefono></div>
-            </div>
-
-            <!-- Caja de despliegue de regiones -->
-            <div class="region">
-              <label for="regionSelect" class="form-label">Región</label>
-              <select id="regionSelect" class="form-control">
-                <option value="">Seleccione una región</option>
-                <option value="metropolitana">Región Metropolitana</option>
-                <option value="valparaiso">Región de Valparaíso</option>
-                <option value="biobio">Región del Biobío</option>
-                <option value="araucania">Región de la Araucanía</option>
-                <option value="nuble">Región de Ñuble</option>
-              </select>
-            </div>
-            
-            <!-- Caja de despliegue de Comunas -->
-            <div class="comuna">
-              <label for="comunaSelect" class="form-label">Comuna</label>
-              <select id="comunaSelect" class="form-control" disabled>
-                <option value="">Seleccione una comuna</option>
-            <!-- Se llenará dinámicamente con JavaScript -->
-              </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         </form>
         <!-- fin formulario registro de usuario-->
 
 </section>
 
-<!-- FIN SECCION REGISTRO DE USUARIO-->
+<!-- FIN SECCION INICIO SESION DE USUARIO-->
 
      <script src="scripts/main.js"></script>
 
