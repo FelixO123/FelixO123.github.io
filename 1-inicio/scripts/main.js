@@ -15,9 +15,9 @@ const container = document.getElementById("productContainer");
         card.innerHTML = `
         <img src="${producto.imagen}" alt="${producto.nombre}">
         <h3>${producto.nombre}</h3>
-        <p>${producto.descripcion}</p>
+        <p>Aprende a programar</p>
         <p class="price">$${producto.precio.toLocaleString()}</p>
-        <a href="#" class="btn">Agregar al carrito</a>
+        
         `;
         container.appendChild(card);
     });

@@ -13,7 +13,19 @@
   background: #fff;
   flex-wrap: wrap; /* Permite que los hijos bajen en pantallas pequeñas */
 }
-
+.miniaturas img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.miniaturas img:hover {
+  box-shadow: 0 0 8px #aaa;
+}
 /* Fotos y miniaturas: bloque separado */
 .detalle-imagenes {
   flex: 1 1 350px;
@@ -65,7 +77,34 @@
   gap: 20px;
   flex-wrap: wrap; /* Permite que bajen si no caben */
 }
+#relacionados-list > div {
+  width: 120px;
+  min-width: 100px;
+  max-width: 140px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 10px 6px;
+  transition: transform 0.15s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#relacionados-list > div:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 4px 16px #0002;
+}
+
+#relacionados-list img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
 /* Opcional: en móvil, apila verticalmente */
 @media (max-width: 700px) {
   #relacionados-list {
