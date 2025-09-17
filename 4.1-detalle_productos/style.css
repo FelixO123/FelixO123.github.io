@@ -1,0 +1,75 @@
+/* ...existing code... */
+
+/* Contorno para el bloque principal */
+
+/* ...existing code... */
+
+/* Contenedor principal: horizontal en escritorio */
+.detalle-container {
+  display: flex;
+  gap: 40px;
+  margin: 40px;
+  padding: 24px;
+  background: #fff;
+  flex-wrap: wrap; /* Permite que los hijos bajen en pantallas pequeñas */
+}
+
+/* Fotos y miniaturas: bloque separado */
+.detalle-imagenes {
+  flex: 1 1 350px;
+  min-width: 300px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 120px;
+  margin-left: 30px;
+}
+
+/* Info: bloque separado */
+.detalle-info {
+  flex: 2 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-left: 2px solid #838383;
+  padding-left: 32px;
+  min-width: 280px;
+}
+
+/* ...resto de tu código... */
+
+/* RESPONSIVE: en pantallas pequeñas, apila verticalmente */
+@media (max-width: 900px) {
+  .detalle-container {
+    flex-direction: column;
+    gap: 24px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .detalle-imagenes {
+    align-items: center;
+    max-width: 100%;
+    border-left: none;
+    padding-left: 0;
+  }
+  .detalle-info {
+    border-left: none;
+    padding-left: 0;
+    min-width: 0;
+  }
+}
+#relacionados-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que bajen si no caben */
+}
+
+/* Opcional: en móvil, apila verticalmente */
+@media (max-width: 700px) {
+  #relacionados-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

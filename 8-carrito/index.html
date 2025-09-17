@@ -10,7 +10,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="scripts/main.js" defer></script>
+    
     
 
 
@@ -63,42 +63,37 @@
     </div>
     </nav>
 <!-- FIN BARRA DE NAVEGACION-->
-
-
-<section id="presentacion" class="seccion1" >
-  
-  <div>
-  <h1 class="texto1"> Nuevo Curso de Machine Learning </h1>
-  <p class="texto1"> El 18 de septiembre se estrenara un nuevo curso para la plataforma
-    , en esta oportunidad te entregamos todo el conocimiento sobre el Machine Learning y la IA </p>
-  <button class="boton1">Ver</button>
-  </div>    
-  <div class="imagen1">
-    <img src="https://media1.tenor.com/m/f6ts3WWJa-8AAAAd/funny-cats-funny.gif" alt="Logo" >
+ <section style="width: auto; max-width: 1300px; margin: auto; padding: 20px;">
+  <h2 class="cart-text"> Carrito de Compra</h2>
+ <div class="cart-container">
+  <!-- Lista de productos -->
+  <div class="cart-products" id="cart-products">
+    <h3>Productos</h3>
+    <!-- Aquí se insertan los productos con JS -->
   </div>
-  </section>
-  
+
+  <!-- Resumen de compra -->
+   <div id="carrito"></div>
+  <div class="cart-summary">
+    <h3>Resumen de compra</h3>
+    <p>Total: <span id="total">0</span></p>
+    <a href="/1-inicio/index.html"><button class="checkout-btn" onclick="checkout()">Continuar compra</button></a>
+  </div>
+</div>
+<script src="scripts/main.js" ></script>
+<script src="/productos.js"></script>
+</section>
 <!-- FIN Seccion 1-->
-
-<!-- SECCION 2-->
-
-<section id="presentacion" class="seccion2" >
+  <!-- SECCION PRODUCTOS-->
   
-  <div>
-  <h1 class="texto2">Conferencia exclusiva por nuestro canal de youtube: ¿Como Empezar
-    Un Proyecto Informático Desde Cero?
-  </h1>
-  <p class="texto2"> El 25 de septiembre se transmitira una nueva charla por nuestro canal de youtube
-    , se aconsejara en como abordar un proyecto Informático desde cero </p>
-  <button class="boton2">Ver</button>
-  </div>    
-  <div class="imagen2">
-    <img src="https://media1.tenor.com/m/f6ts3WWJa-8AAAAd/funny-cats-funny.gif" alt="Logo" >
-  </div>
-  </section>
 
-<!-- FIN SECCION 2-->
 
+<!-- FIN SECCION PRODUCTOS-->
+
+
+
+
+ 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
