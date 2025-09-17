@@ -9,20 +9,32 @@
 }
 
 */
+body {
+  overflow-x: hidden;
+}
 @media (max-width: 900px) {
   .seccion1 {
     flex-direction: column;
     gap: 20px;
     padding: 18px 6px;
+    text-align: center;
   }
-  
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer-right {
+    text-align: left;
+    margin-right: 0;
+  }
+
 }
 .seccion1{
     background-color: rgb(253, 202, 91);
     min-height: 350px;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0 10px 5px grey;
     margin: auto;
-    
+    padding-left:12px;
     max-width: 1300px;
     grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
     align-items: center;            /* alinea verticalmente */
@@ -44,7 +56,7 @@
 .texto1{
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 50px;
+    margin: 30px 10px;
     color: rgb(255, 255, 255);
 }
 
@@ -98,11 +110,25 @@
   color: #e63946;
 }
 
+
+
+.footer-left,
+.footer-right {
+  min-width: 0; /* Permite que se reduzcan en pantallas pequeñas */
+}
+
+.newsletter {
+  margin-left: 0; /* Elimina el margen que empuja el contenido */
+}
+
 .footer {
   background: #f8f8f8;
   border-top: 1px solid #ddd;
   padding: 20px 40px;
   margin-top: 40px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .footer-container {
@@ -110,14 +136,17 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
-
+/*
 .footer-left {
   flex: 1;
   min-width: 250px;
   
 }
-
+*/
 .footer-left h3 {
   margin-bottom: 10px;
 }
@@ -125,7 +154,7 @@
 .links{
   list-style: none;
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   display: flex;
   gap: 15px;
 }
@@ -138,23 +167,23 @@
 
 .payment-icons img {
   width: 40px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
-
+/*
 .footer-right {
   flex: 1;
   min-width: 250px;
   text-align: right;
   margin-right: 10px;
 }
-
+*/
 .footer-right p {
   margin-bottom: 10px;
 }
 
 .newsletter {
   display: flex;
-  margin-left: 80px;
+  margin-left: 0z;
   
 }
 
