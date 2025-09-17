@@ -11,10 +11,9 @@ function renderProductos() {
     card.innerHTML = `
       <img src="${producto.imagen}" alt="${producto.nombre}">
       <h3>${producto.nombre}</h3>
-      <p>${producto.descripcion}</p>
+      <p>Aprende a programar</p>
       <p class="price">$${producto.precio.toLocaleString()}</p>
-      <button class="btn" onclick="addToCart(${producto.id})">Agregar al carrito</button>
-    `;
+     `;
     container.appendChild(card);
   });
 }
