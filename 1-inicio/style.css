@@ -9,7 +9,14 @@
 }
 
 */
-
+@media (max-width: 900px) {
+  .seccion1 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 18px 6px;
+  }
+  
+}
 .seccion1{
     background-color: rgb(253, 202, 91);
     min-height: 350px;

@@ -35,5 +35,5 @@ function addToCart(id) {
   }
 
   saveCart();
-  alert(`${product.nombre} agregado al carrito`);
+    alert(`${product.nombre} agregado al carrito`);
 }
