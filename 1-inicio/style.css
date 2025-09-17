@@ -9,20 +9,22 @@
 }
 
 */
+
 @media (max-width: 900px) {
   .seccion1 {
     flex-direction: column;
     gap: 20px;
     padding: 18px 6px;
+    text-align: center;
   }
-  
+
 }
 .seccion1{
     background-color: rgb(253, 202, 91);
     min-height: 350px;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0 10px 5px grey;
     margin: auto;
-    
+    padding-left:12px;
     max-width: 1300px;
     grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
     align-items: center;            /* alinea verticalmente */
@@ -44,7 +46,7 @@
 .texto1{
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 50px;
+    margin: 30px 10px;
     color: rgb(255, 255, 255);
 }
 
@@ -103,6 +105,7 @@
   border-top: 1px solid #ddd;
   padding: 20px 40px;
   margin-top: 40px;
+  
 }
 
 .footer-container {
@@ -125,7 +128,7 @@
 .links{
   list-style: none;
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   display: flex;
   gap: 15px;
 }
@@ -138,7 +141,7 @@
 
 .payment-icons img {
   width: 40px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .footer-right {
