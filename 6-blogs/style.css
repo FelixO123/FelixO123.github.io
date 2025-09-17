@@ -1,31 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para alinear las secciones de arriba hacia abajo */
+    min-height: 100vh; /* Para asegurar que ocupe toda la altura */
+    margin: 0; /* Para quitar márgenes por defecto */
+}
+
+.navbar{
+  width: 100%;  /* Esto hará que la barra ocupe todo el ancho de la pantalla */
+    position: absolute;  /* Opcional: hace que la barra esté siempre fija en la parte superior */
+    top: 0;
+    left: 0;
+}
+
+.encabezado1{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 .seccion1{
     background-color: rgb(253, 202, 91);
-    min-height: 350px;
-    box-shadow: 10px 10px 5px grey;
-     margin: 40px;
-    
-    max-width: 1300px;
-    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
-    align-items: center;            /* alinea verticalmente */
-    gap: 10px;       
-    display: flex;
-    justify-content: space-between;   
-    padding: 20px;
+          min-height: 350px;
+          box-shadow: 10px 10px 5px grey;
+          margin: 20px;
+          max-width: 1300px;
+          /* Esto limita el ancho máximo */
+          display: flex;
+          justify-content: space-between;
+          /* Espacio entre los elementos internos */
+          align-items: center;
+          /* Alineación vertical */
+          padding: 20px;
+          border-radius: 15px;
+          /* Le da un borde redondeado */
 }
 
 .seccion2{
-        background-color: rgb(253, 202, 91);
+    background-color: rgb(253, 202, 91);
     min-height: 350px;
     box-shadow: 10px 10px 5px grey;
-    margin: 40px;
-    
-    max-width: 1300px;
-    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
-    align-items: center;            /* alinea verticalmente */
-    gap: 10px;       
+    margin: 20px;
+    max-width: 1300px; /* Esto limita el ancho máximo */
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;  /* Espacio entre los elementos internos */
+    align-items: center;             /* Alineación vertical */
     padding: 20px;
+    border-radius: 15px;  /* Le da un borde redondeado */
 
 }
 
@@ -51,34 +72,35 @@
 
 }
 .texto1{
-    text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 50px;
-    color: rgb(255, 255, 255);
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 50px;
+  color: rgb(255, 255, 255);
+  flex: 1;
+  /* Esto hace que el texto ocupe el espacio disponible */
 }
 
 .texto2 {
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 50px;
-    color: rgb(255, 255, 255); /* blanco */
+    color: rgb(255, 255, 255);
+    flex: 1;  /* Esto hace que el texto ocupe el espacio disponible */
 }
 
 .imagen1 img{
-    border-radius: 10px; 
-    margin-right: 30px ;
-    display: block;
-    align-content: center;
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
+border-radius: 10px;
+  margin-right: 30px;
+  display: block;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .imagen2 img{
-    border-radius: 10px; 
-    margin-right: 30px ;
+    border-radius: 10px;
+    margin-right: 30px;
     display: block;
-    align-content: center;
     width: 400px;
     height: 250px;
     object-fit: cover;

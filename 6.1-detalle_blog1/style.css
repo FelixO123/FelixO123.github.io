@@ -1,15 +1,80 @@
-.seccion1{
+body {
+  margin: 0;
+  padding-top: 10px
+
+}
+
+.navbar{
+    width: 100%;             /* Asegura que ocupe todo el ancho de la pantalla */
+    position: fixed;         /* Fija la barra en la parte superior */
+    top: 0;                  /* Coloca la barra en la parte superior */
+    left: 0;                 /* Alinea la barra con el borde izquierdo */
+    z-index: 1000;           /* Asegura que la barra esté sobre otros elementos */
+    background-color: #ffe07a; /* Color de fondo para la barra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra para darle efecto de elevación */
+    padding: 10px 20px;      /* Espaciado para que no se vea pegada a los bordes */
+    font-family: 'copperplate', fantasy;  /* Establece la fuente */
+    font-weight: lighter;
+}
+
+/* Ajuste para los elementos dentro de la barra */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajuste de la marca y el logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustar los enlaces de la barra */
+.navbar-nav {
+    display: flex;
+    gap: 20px;  /* Espaciado entre los elementos */
+}
+
+.nav-link {
+    color: black;  /* Color del texto de los enlaces */
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #e63946;  /* Cambia el color cuando pasa el mouse */
+}
+
+/* Ajuste para el carrito */
+.navbar-brand img {
+    border-radius: 75px;
+    margin-right: 8px;  /* Espacio entre el logo y el texto */
+}
+
+
+
+.seccion1 {
     background-color: rgb(253, 202, 91);
-    height: 600px;
+    min-height: 600px;
     box-shadow: 10px 10px 5px grey;
-    margin: 40px;
-    flex-direction: column;
-    max-width: 1300px;
-    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
-    align-items: center;            /* alinea verticalmente */
-    gap: 10px;       
-    justify-content: flex-start;   
-    padding: 20px;
+    margin: 30px auto 0 auto;   /* margen superior + centrado horizontal */
+    max-width: 1000px;          /* ajusta el ancho total */
+    display: flex;
+    flex-direction: column;     /* apilar elementos por defecto */
+    align-items: center;        /* centra horizontalmente */
+    gap: 20px;
+    padding: 30px;
+    text-align: center;    
+    border-radius: 15px;        
+   
+}
+
+.encabezado1{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    text-align: center; 
+
 }
 
 .seccion1 h1 {
@@ -26,14 +91,14 @@
 
 
 .boton1{
-    margin-bottom: 30px;
-    border-color: black;
+margin: 20px auto;        /* margen arriba/abajo y centrado horizontal */
+    border: 1px solid black;
     background-color: rgb(248, 248, 248);
     border-radius: 20px;
     text-align: center;
-    display: block;           /* convierte al botón en bloque */
-    margin-left: 520px;
-    margin: 0 auto 100 auto 0 auto 0 auto;       /* centra el botón horizontalmente */
+    display: block;           /* necesario para que margin auto funcione */
+    padding: 8px 20px;        /* más espacio interno para que luzca mejor */
+    cursor: pointer;
 
 }
 .texto1{

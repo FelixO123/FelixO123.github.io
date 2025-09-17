@@ -7,3 +7,9 @@ body{
     height: 100vh;
 }
 
+
+.h2_registro_usuario{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: center; 
+}
